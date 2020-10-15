@@ -1,0 +1,98 @@
+﻿<Window x:Class="ProjetWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Projet FILM" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="50" Foreground="Black"></TextBlock>
+        <TextBlock Grid.Row="1" Foreground="SkyBlue" Text="Choix du genre du film" FontSize="20" VerticalAlignment="Top"></TextBlock>
+        <ComboBox SelectionChanged="cboGenreFilm_SelectionChanged" Name="cboGenreFilm" Grid.Row="1" Width="180" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock FontSize="20" Foreground="SkyBlue" VerticalAlignment="Top" HorizontalAlignment="Center" Text="Ajouter un nouveau genre" Grid.Column="1" Grid.Row="1"></TextBlock>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Liste des films" FontSize="25" Foreground="SkyBlue"></TextBlock>
+        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
+            <WrapPanel>
+                <TextBlock Text="Saisir le nom du genre"></TextBlock>
+                <TextBox Width="100" Name="txtGenre"></TextBox>
+            </WrapPanel>
+        </StackPanel>
+        
+
+        <ListBox SelectionChanged="lstFilms_SelectionChanged" Name="lstFilms" Grid.Row="2" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding PhotoFilm}" Width="50" Height="50"></Image>
+                        <TextBlock Text="{Binding TitreFilm}" Width="50"></TextBlock>
+                        <TextBlock Text="{Binding NbEntrees}" Width="50"></TextBlock>
+                        <TextBlock Text="{Binding LeRealisateur.NomRealisateur}" Width="100"></TextBlock>
+                        <TextBlock Text="{Binding LeRealisateur.PrenomRealisateur}" Width="50"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Ajouter un genre" Height="20" Grid.Column="1" Grid.Row="2"></Button>
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" Text="Ajouter un nouveau film" HorizontalAlignment="Center" FontSize="20" Foreground="SkyBlue"></TextBlock>
+
+        <TextBlock Grid.Row="3" Text="Liste des acteurs" Foreground="SkyBlue" HorizontalAlignment="Center" FontSize="15"></TextBlock>
+        <ListBox SelectionChanged="lstActeurs_SelectionChanged" Name="lstActeurs" Grid.Row="3" Height="50">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding PhotoActeur}"></Image>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+           
+        </ListBox>
+        
+        <StackPanel Grid.Row="3" Grid.Column="3">
+            <WrapPanel Orientation="Vertical">
+                <TextBlock Text="Saisir le nom du film"></TextBlock>
+                <TextBox Name="txtFilm"></TextBox>
+                <TextBlock Text="Saisir le nombre d'entrées du film"></TextBlock>
+                <TextBox Name="txtNbEntreesFilm"></TextBox>
+                <TextBlock Text="Saisir le nom du réalisateur"></TextBlock>
+                <TextBox Name="txtRealisateur"></TextBox>
+                <TextBlock Text="Saisir le prenom du réalisateur"></TextBlock>
+                <TextBox Name="txtPrenomRealisateur"></TextBox>
+            </WrapPanel>
+        </StackPanel>
+
+        <ListBox SelectionMode="Multiple" Name="lstActeursSelectionner" Grid.Row="4" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Source="{Binding PhotoActeur}"></Image>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Name="btn"></Button>
+    </Grid>
+</Window>

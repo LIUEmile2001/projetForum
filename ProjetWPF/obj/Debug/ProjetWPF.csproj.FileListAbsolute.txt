@@ -1,0 +1,15 @@
+C:\CSHARP\ProjetFilm\ProjetWPF\bin\Debug\ProjetWPF.exe.config
+C:\CSHARP\ProjetFilm\ProjetWPF\bin\Debug\ProjetWPF.exe
+C:\CSHARP\ProjetFilm\ProjetWPF\bin\Debug\ProjetWPF.pdb
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.csprojAssemblyReference.cache
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\MainWindow.g.cs
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\App.g.cs
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF_MarkupCompile.cache
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF_MarkupCompile.lref
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\MainWindow.baml
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.g.resources
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.Properties.Resources.resources
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.csproj.GenerateResource.cache
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.csproj.CoreCompileInputs.cache
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.exe
+C:\CSHARP\ProjetFilm\ProjetWPF\obj\Debug\ProjetWPF.pdb
